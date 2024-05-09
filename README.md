@@ -1,30 +1,33 @@
-# React + TypeScript + Vite
+# Задание: Разработать приложение для демонстрации данных, полученных из API сервиса.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+API: https://restcountries.com/
 
-Currently, two official plugins are available:
+Задачи:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+В приложении должен быть отображен список стран и по клику на страну должна открываться страница с подробностями о стране.
 
-## Expanding the ESLint configuration
+Также минимально требуется стилизовать с помощью Bootstrap или любой другой библиотеки.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+При отображении страны данные для вывода для примера, но можно не ограничиваться:
+– Name
+– Capital
+– Flag
 
-- Configure the top-level `parserOptions` property like this:
+Добавить обработку случая, когда API не возвращает данные или возвращает ошибку.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Что выполнено:
+1. Отображен список стран
+2. По клику на страну открывается страница с подробностями о стране
+  – Name
+  – Capital
+  – Flag
+  – Region-subregion
+  – Population
+3. Минимально стилизовано module.css
+4. Добавлена обработка случая, когда API не возвращает данные или возвращает ошибку. 
+На ошибку установлено          стандартное сообщение или при получении текста ошибки выводится ее содержание.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Технолгоический стек:
+React + TypeScript + Vite + React router
+Запуск приложения из каталога my-app: npm run dev  
+http://localhost:5174/
