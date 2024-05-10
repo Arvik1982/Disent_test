@@ -3,6 +3,7 @@ export default async function getCountryInfoApi(
   name: string,
   setError: Dispatch<string>
 ) {
+  
   try {
     const responseData = await fetch(
       `https://restcountries.com/v3.1/name/${name}`,
