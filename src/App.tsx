@@ -1,16 +1,15 @@
-import { useEffect, useState } from "react";
-import AppRoutes from "./routes/AppRoutes";
+import { useState } from 'react';
+import './App.css';
+import AppRoutes from './routes/AppRoutes';
 
 function App() {
-  const [error, setError] = useState("");
-  useEffect(() => {
-    setError("");
-  }, []);
+  const [error, setError] = useState('');
   return (
-    <>
-      {error && <h1 style={{ color: "red" }}>{error}</h1>}
-      <AppRoutes setError={setError} />
-    </>
+    <div>
+      <h1>Страны мира</h1>
+      {error && <h2 style={{ color: 'red' }}>{error}</h2>}
+      <AppRoutes setError={setError} error={error} />
+    </div>
   );
 }
 
